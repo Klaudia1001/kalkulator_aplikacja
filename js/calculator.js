@@ -14,10 +14,10 @@ function inputClick(value) {
            document.getElementById('view').value += value; 
         } //jeśli ciąg cyfr kończy się kropką to mogę pisać dalej cyfry; nie wcisnę dwóch kropek
     } else {
-        if (isNaN(viewValue.slice(-1)) || viewValue.indexOf('/0')>-1){
-            document.getElementById('view').value = "Error!";
+        if (isNaN(viewValue.slice(-1)) || viewValue.indexOf('/0')>-1){//sprawdzam czy ostani znak aplikacji jest liczbą
+            document.getElementById('view').value = "Error!";//jeśli ostatni znak nie jest cyfrą wyświetla błąd
         } else {
-             document.getElementById('view').value = eval(viewValue);
+             document.getElementById('view').value = eval(viewValue);//funkcja wylicza i wyświetla wynik
         }
        
         
